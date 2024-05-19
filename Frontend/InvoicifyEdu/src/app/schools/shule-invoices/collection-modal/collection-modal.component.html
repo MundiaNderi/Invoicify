@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Collect Payment</h2>
+<div mat-dialog-content>
+  <form [formGroup]="collectionForm">
+    <mat-form-field>
+      <label>Amount</label>
+      <input matInput formControlName="amount" type="number">
+    </mat-form-field>
+    <mat-form-field>
+      <label>Date</label>
+      <input matInput formControlName="date" type="date">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSubmit()" [disabled]="!collectionForm.valid">Submit</button>
+</div>

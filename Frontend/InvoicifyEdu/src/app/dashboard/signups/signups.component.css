@@ -1,0 +1,22 @@
+.signups {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.signups canvas {
+    width: 50%;
+    height: 100px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .signups canvas {
+        width: 100%;
+        height: 200px;
+        /* Adjust height for smaller screens */
+    }
+}

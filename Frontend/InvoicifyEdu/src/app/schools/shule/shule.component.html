@@ -1,0 +1,60 @@
+<div class="shule">
+  <h1>School Management</h1>
+  <form [formGroup]="filterForm" class="filter-form">
+    <mat-form-field appearance="fill">
+      <label>Filter by product</label>
+      <mat-select formControlName="product">
+        <mat-option value="all">All</mat-option>
+        <mat-option value="Zeraki Analytics">Zeraki Analytics</mat-option>
+        <mat-option value="Zeraki Finance">Zeraki Finance</mat-option>
+        <mat-option value="Zeraki Timetable">Zeraki Timetable</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary">Add School</button>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let school"> {{ school.id }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let school"> {{ school.name }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef> Type </th>
+      <td mat-cell *matCellDef="let school"> {{ school.type }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="product">
+      <th mat-header-cell *matHeaderCellDef> Product </th>
+      <td mat-cell *matCellDef="let school"> {{ school.product }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="county">
+      <th mat-header-cell *matHeaderCellDef> County </th>
+      <td mat-cell *matCellDef="let school"> {{ school.county }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="registrationDate">
+      <th mat-header-cell *matHeaderCellDef> Registration Date </th>
+      <td mat-cell *matCellDef="let school"> {{ school.registrationDate }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="contact">
+      <th mat-header-cell *matHeaderCellDef> Contact Information </th>
+      <td mat-cell *matCellDef="let school"> {{ school.contact }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="balance">
+      <th mat-header-cell *matHeaderCellDef> School Balance </th>
+      <td mat-cell *matCellDef="let school"> {{ school.balance }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSize]="10" [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+</div>

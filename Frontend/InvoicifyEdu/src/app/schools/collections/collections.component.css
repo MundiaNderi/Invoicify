@@ -1,0 +1,38 @@
+.invoice-collection {
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.invoice-collections {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.invoice-collections h2 {
+    margin-bottom: 10px;
+}
+
+.invoice-collections table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.invoice-collections th,
+.invoice-collections td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.invoice-collections th {
+    background-color: #f2f2f2;
+}
+
+.invoice-collections td button {
+    margin-right: 5px;
+}

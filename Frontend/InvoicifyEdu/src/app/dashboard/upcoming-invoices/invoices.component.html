@@ -1,0 +1,23 @@
+<div class="upcoming-invoices">
+  <h2>Upcoming Invoices</h2>
+  <table class="invoice-table">
+    <thead>
+    <tr>
+      <th>School Name</th>
+      <th>Amount Due</th>
+      <th>Due Date</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let invoice of upcomingInvoices" class="invoice-item">
+      <td>{{ invoice.schoolName }}</td>
+      <td>{{ invoice.amountDue | kesCurrency }}</td>
+      <td>{{ invoice.dueDate | date }}</td>
+      <td>
+        <button mat-button (click)="openPaymentModal(invoice)">Collect Payments</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

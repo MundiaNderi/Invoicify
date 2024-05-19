@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="sidenav">
+    <div class="logo-container">
+      <img src="/assets/Zeraki.png" alt="" />
+    </div>
+    <nav>
+      <ul class="sidenav-nav">
+        <li class="sidenav-item">
+          <ng-icon size="20px" name="radixDashboard"></ng-icon>
+          <a
+            (click)="navigateTo('/dashboard')"
+            routerLink="/dashboardi"
+            routerLinkActive="active"
+            class="sidenav-nav-link"
+          >
+            {{ dashboard }}
+          </a>
+        </li>
+        <li class="sidenav-item">
+          <ng-icon size="20px" name="lucideSchool">s</ng-icon>
+          <a
+            (click)="navigateTo('/schools')"
+            routerLink="/schools"
+            routerLinkActive="active"
+            class="sidenav-nav-link"
+            >{{ schoolsModule }}</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <hr class="divider" />
+</div>

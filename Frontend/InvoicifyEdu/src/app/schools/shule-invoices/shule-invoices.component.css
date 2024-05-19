@@ -1,0 +1,30 @@
+.shule-invoices {
+    margin-top: 24px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.shule-invoices table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.shule-invoices th,
+.shule-invoices td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.shule-invoices th {
+    background-color: #f2f2f2;
+}
+
+.shule-invoices tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

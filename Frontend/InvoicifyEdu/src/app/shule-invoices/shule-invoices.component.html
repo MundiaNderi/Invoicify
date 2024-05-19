@@ -1,0 +1,33 @@
+<div class="shule-invoice">
+  <div class="shule-invoices">
+    <h2>School Invoices</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>UpcomingInvoices Number</th>
+          <th>UpcomingInvoices Item</th>
+          <th>Creation Date</th>
+          <th>Due Date</th>
+          <th>Amount</th>
+          <th>Paid Amount</th>
+          <th>Balance</th>
+          <th>Completion Status</th>
+          <th>Days Until Due</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let invoice of invoices">
+          <td>{{ invoice.id }}</td>
+          <td>{{ invoice.item }}</td>
+          <td>{{ formatDate(invoice.creationDate) }}</td>
+          <td>{{ formatDate(invoice.dueDate) }}</td>
+          <td>{{ invoice.amount }}</td>
+          <td>{{ invoice.paidAmount }}</td>
+          <td>{{ invoice.amount - invoice.paidAmount }}</td>
+          <td>{{ invoice.status }}</td>
+          <td>{{ calculateDaysUntilDue(invoice.dueDate) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

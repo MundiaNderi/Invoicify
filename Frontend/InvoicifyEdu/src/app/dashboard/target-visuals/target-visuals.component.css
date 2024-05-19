@@ -1,0 +1,22 @@
+.target-visuals {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    gap: 20px;
+    justify-content: space-between;
+}
+.target-visuals h1 {
+    padding-left: 20px;
+    justify-content: space-between;
+}
+/* Media Queries */
+@media only screen and (max-width: 768px) { 
+    .target-visuals {
+        flex-direction: column;
+    }
+}

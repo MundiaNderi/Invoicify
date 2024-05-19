@@ -1,0 +1,28 @@
+<div class="card-metrics">
+  <div class="card">
+    <h2>Total Number of collections</h2>
+    <p>{{ collectionCount }}</p>
+  </div>
+  <div class="card">
+    <h2>New Sign Ups</h2>
+    <div class="metric" *ngFor="let product of ['Zeraki Analytics', 'Zeraki Finance', 'Zeraki Timetable']">
+      <div class="text">{{ product }}:</div>
+      <div class="value">{{ signUpCounts[product] }}</div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h2>Total Revenue</h2>
+    <div class="metric" *ngFor="let product of ['Zeraki Analytics', 'Zeraki Finance', 'Zeraki Timetable']">
+      <div class="text">{{ product }}:</div>
+      <div class="value">{{ totalRevenue[product] | kesCurrency }}</div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h2>Bounced Cheques</h2>
+    <p>{{bouncedCheques}}</p>
+  </div>
+</div>
